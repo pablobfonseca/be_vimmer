@@ -14,9 +14,12 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+gem 'simple_form', '~> 3.4'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5.1'
   gem 'byebug', platform: :mri
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -29,6 +32,7 @@ end
 group :test do
   gem 'simplecov', '~> 0.12.0', require: nil
   gem 'capybara', '~> 2.7.0'
+  gem 'poltergeist', '~> 1.10.0'
   gem 'database_cleaner', '~> 1.5.3'
   gem "codeclimate-test-reporter", require: nil
 end

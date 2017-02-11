@@ -1,0 +1,9 @@
+<h2>New Command</h2>
+
+<%= simple_form_for @command do |f| %>
+  <%= f.input :mode_id, as: :select, collection: @modes %>
+  <%= f.input :command %>
+  <%= f.input :description %>
+
+  <%= f.submit "Create" %>
+<% end %>

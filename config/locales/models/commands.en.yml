@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      command:
+        mode_id: Mode
+        command: Command
+        description: Description
