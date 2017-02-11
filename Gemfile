@@ -30,6 +30,7 @@ group :test do
   gem 'simplecov', '~> 0.12.0', require: nil
   gem 'capybara', '~> 2.7.0'
   gem 'database_cleaner', '~> 1.5.3'
+  gem "codeclimate-test-reporter", require: nil
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
