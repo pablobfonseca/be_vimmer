@@ -1,0 +1,25 @@
+{
+  "name": "BeVimmer",
+  "homepage": "https://github.com/pablobfonseca/be_vimmer",
+  "authors": [
+    "Pablo Fonseca <pablofonseca777@gmail.com>"
+  ],
+  "description": "A vim-cheatsheet online",
+  "main": "",
+  "keywords": [
+    "Vim"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery-ujs": "^1.2.2"
+  }
+}
