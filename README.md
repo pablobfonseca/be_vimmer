@@ -7,4 +7,7 @@
 Get vim tips
 
 ## Features
-[TODO]
+- [x] Create new vim commands
+- [x] View commands by its mode
+- [ ] Save favorite commands
+- [ ] Export commands to PDF
