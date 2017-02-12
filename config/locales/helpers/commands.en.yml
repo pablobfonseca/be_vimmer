@@ -1,0 +1,8 @@
+en:
+  helpers:
+    notices:
+      commands:
+        new_command: A new command has been added
+    pages:
+      commands:
+        new_command: New Command

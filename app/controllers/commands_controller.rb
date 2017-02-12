@@ -8,7 +8,7 @@ class CommandsController < ApplicationController
     @command = Command.new(command_params)
 
     if @command.save
-      redirect_to root_path, notice: "A new command has been added"
+      redirect_to root_path, notice: t('helpers.notices.commands.new_command')
     else
       load_modes
       render :new
