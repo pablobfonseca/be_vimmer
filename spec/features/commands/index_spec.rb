@@ -26,4 +26,10 @@ feature 'As User I Want to' do
       expect(page).to have_content(command.description)
     end
   end
+
+  scenario 'see a message when does not have any command' do
+    visit normal_mode_commands_path
+
+    expect(page).to have_content 'There are no commands yet'
+  end
 end

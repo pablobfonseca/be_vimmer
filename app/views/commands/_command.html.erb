@@ -1,16 +1,4 @@
-<table class="table table-bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @commands.each do |command| %>
-      <tr>
-        <td><%= command.command %></td>
-        <td><%= command.description %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<tr>
+  <td><%= command.command %></td>
+  <td><%= command.description %></td>
+</tr>

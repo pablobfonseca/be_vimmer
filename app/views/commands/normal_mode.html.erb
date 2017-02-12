@@ -1,2 +1,13 @@
 <h2>Normal Mode Command List</h2>
-<%= render @commands %>
+
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render(@commands) || content_tag(:p, t('helpers.messages.there_are_no_commands')) %>
+  </tbody>
+</table>

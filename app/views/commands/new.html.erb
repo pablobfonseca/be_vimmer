@@ -1,9 +1,11 @@
 <h2>New Command</h2>
 
-<%= simple_form_for @command do |f| %>
+<%= simple_form_for @command, html: { class: 'form-horizontal' } do |f| %>
+  <%= f.error_notification %>
+
   <%= f.input :mode_id, as: :select, collection: @modes %>
   <%= f.input :command %>
   <%= f.input :description %>
 
-  <%= f.submit "Create" %>
+  <%= f.submit "Create", class: "btn btn-success" %>
 <% end %>
