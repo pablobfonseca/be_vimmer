@@ -1,0 +1,9 @@
+<%= simple_form_for @command, html: { class: 'form-horizontal' } do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.association :mode %>
+  <%= f.input :command %>
+  <%= f.input :description %>
+
+  <%= f.submit class: "btn btn-success" %>
+<% end %>

@@ -1,7 +1,20 @@
 class CommandsController < ApplicationController
   def new
     @command = Command.new
-    load_modes
+  end
+
+  def edit
+    command
+  end
+
+  def update
+    command
+
+    if @command.update(command_params)
+      redirect_to root_path, notice: t('helpers.notices.commands.edit_command')
+    else
+      render :edit
+    end
   end
 
   def create
@@ -10,7 +23,6 @@ class CommandsController < ApplicationController
     if @command.save
       redirect_to root_path, notice: t('helpers.notices.commands.new_command')
     else
-      load_modes
       render :new
     end
   end
@@ -25,8 +37,8 @@ class CommandsController < ApplicationController
 
   private
 
-  def load_modes
-    @modes ||= Mode.all
+  def command
+    @command ||= Command.find params[:id]
   end
 
   def command_params

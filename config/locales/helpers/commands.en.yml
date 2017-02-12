@@ -3,6 +3,8 @@ en:
     notices:
       commands:
         new_command: A new command has been added
+        edit_command: The command has been updated
     pages:
       commands:
         new_command: New Command
+        edit_command: Edit Command
