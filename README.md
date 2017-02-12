@@ -11,3 +11,10 @@ Get vim tips
 - [x] View commands by its mode
 - [ ] Save favorite commands
 - [ ] Export commands to PDF
+
+## Importing Modes
+The modes are being imported through the seeds file.
+
+```
+$ rake db:seed
+```
