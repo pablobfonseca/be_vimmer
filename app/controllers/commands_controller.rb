@@ -14,6 +14,14 @@ class CommandsController < ApplicationController
     end
   end
 
+  def normal_mode
+    @commands = Command.normal_mode
+  end
+
+  def visual_mode
+    @commands = Command.visual_mode
+  end
+
   private
 
   def command_params
