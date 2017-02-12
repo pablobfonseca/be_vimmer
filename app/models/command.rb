@@ -4,4 +4,5 @@ class Command < ApplicationRecord
   belongs_to :mode
 
   validates_presence_of :mode_id, :command, :description
+  validates_uniqueness_of :command, :description
 end

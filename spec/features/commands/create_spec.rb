@@ -1,16 +1,19 @@
 require 'rails_helper'
 
 feature 'As a user I want to' do
-  before { create(:mode, name: 'Normal Mode') }
+  before do
+    create(:mode, name: 'Normal Mode')
+    create(:mode, name: 'Visual Mode')
 
-  scenario 'create a new command' do
     visit root_path
 
     within '.navbar' do
       click_on 'Commands'
       click_on 'New'
     end
+  end
 
+  scenario 'create a new command' do
     select("Normal Mode", from: "Mode")
     fill_in "Command", with: ":w"
     fill_in "Description", with: "Save file"
@@ -22,15 +25,21 @@ feature 'As a user I want to' do
   end
 
   scenario 'see an error when trying to create an invalid command' do
-    visit root_path
-
-    within '.navbar' do
-      click_on 'Commands'
-      click_on 'New'
-    end
-
     click_on "Create"
 
     expect(page).to have_content(/can't be blank/)
+  end
+
+  context 'duplicated command' do
+    scenario 'I can not create a duplicated command' do
+      command1 = create(:command, :visual_mode)
+
+      select 'Visual Mode', from: 'Mode'
+      fill_in 'Command', with: command1.command
+      fill_in 'Description', with: command1.description
+      click_on 'Create'
+
+      expect(page).to have_content(/already been taken/)
+    end
   end
 end
