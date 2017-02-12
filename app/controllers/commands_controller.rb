@@ -1,7 +1,7 @@
 class CommandsController < ApplicationController
   def new
     @command = Command.new
-    @modes = Mode.all
+    load_modes
   end
 
   def create
@@ -10,6 +10,7 @@ class CommandsController < ApplicationController
     if @command.save
       redirect_to root_path, notice: "A new command has been added"
     else
+      load_modes
       render :new
     end
   end
@@ -23,6 +24,10 @@ class CommandsController < ApplicationController
   end
 
   private
+
+  def load_modes
+    @modes ||= Mode.all
+  end
 
   def command_params
     params.require(:command).permit(:mode_id, :command, :description)
