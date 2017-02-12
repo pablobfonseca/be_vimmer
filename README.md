@@ -8,6 +8,7 @@ Get vim tips
 
 ## Features
 - [x] Create new vim commands
+- [x] Edit vim commands
 - [x] View commands by its mode
 - [ ] Save favorite commands
 - [ ] Export commands to PDF
