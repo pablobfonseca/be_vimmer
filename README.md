@@ -22,3 +22,4 @@ $ rake db:seed
 
 ## TODOs
 - [ ] Remove view duplications
+- [ ] Create a filter by mode
