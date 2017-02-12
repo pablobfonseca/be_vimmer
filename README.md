@@ -19,3 +19,6 @@ The modes are being imported through the seeds file.
 ```
 $ rake db:seed
 ```
+
+## TODOs
+- [ ] Remove view duplications
