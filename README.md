@@ -13,13 +13,6 @@ Get vim tips
 - [ ] Save favorite commands
 - [ ] Export commands to PDF
 
-## Importing Modes
-The modes are being imported through the seeds file.
-
-```
-$ rake db:seed
-```
-
 ## TODOs
 - [ ] Remove view duplications
 - [x] Create a filter by mode
