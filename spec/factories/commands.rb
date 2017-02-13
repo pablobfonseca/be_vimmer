@@ -1,19 +1,17 @@
 FactoryGirl.define do
   factory :command do
+    sequence(:command) {|x| "e#{x}"}
+    sequence(:description) {|x| "Description Command#{x}"}
 
     trait :normal_mode do
       after :build do |command|
-        command.mode = create(:mode, name: "Normal Mode")
-        command.command = 'e'
-        command.description = 'Jump to the end of a word'
+        command.vim_mode = VimMode::NORMAL_MODE
       end
     end
 
     trait :visual_mode do
       after :build do |command|
-        command.mode = create(:mode, name: "Visual Mode")
-        command.command = 'o'
-        command.description = 'Change between the beginning and the end of a selection'
+        command.vim_mode = VimMode::VISUAL_MODE
       end
     end
   end

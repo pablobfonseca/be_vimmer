@@ -1,0 +1,11 @@
+en:
+  enumerations:
+    vim_mode:
+      normal_mode: Normal Mode
+      visual_mode: Visual Mode
+      insert_mode: Insert Mode
+      sub_mode: Sub Mode
+      text_objects: Text Objects
+      window_commands: Window Commands
+      command_line_mode: Command Line Mode
+      ex_mode: Ex Mode

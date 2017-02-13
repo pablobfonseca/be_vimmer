@@ -1,0 +1,19 @@
+<h2>Command List</h2>
+
+<%= render 'search_form' %>
+
+<br />
+
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+      <th>Mode</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @commands %>
+  </tbody>
+</table>

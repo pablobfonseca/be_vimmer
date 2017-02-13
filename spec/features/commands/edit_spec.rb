@@ -7,8 +7,8 @@ feature 'As a user I want to' do
     visit root_path
 
     within '.nav' do
-      click_on 'Commands Per Mode'
-      click_on 'Normal Mode'
+      click_on 'Commands'
+      click_on 'All'
     end
 
     click_on "edit_command_#{command.id}"

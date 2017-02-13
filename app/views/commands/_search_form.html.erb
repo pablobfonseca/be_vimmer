@@ -1,0 +1,4 @@
+<%= simple_form_for :search, url: commands_path, method: :get, html: { class: 'form-inline' } do |f| %>
+  <%= f.input :filter, as: :select, collection: @vim_modes, label: false %>
+  <%= f.submit "Filter", class: 'btn btn-primary' %>
+<% end %>

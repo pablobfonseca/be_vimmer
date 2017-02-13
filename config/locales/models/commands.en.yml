@@ -2,6 +2,6 @@ en:
   activerecord:
     attributes:
       command:
-        mode_id: Mode
+        vim_mode: Vim Mode
         command: Command
         description: Description

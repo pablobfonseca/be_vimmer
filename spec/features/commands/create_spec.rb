@@ -2,9 +2,6 @@ require 'rails_helper'
 
 feature 'As a user I want to' do
   before do
-    create(:mode, name: 'Normal Mode')
-    create(:mode, name: 'Visual Mode')
-
     visit root_path
 
     within '.navbar' do
@@ -14,7 +11,7 @@ feature 'As a user I want to' do
   end
 
   scenario 'create a new command' do
-    select('Normal Mode', from: 'Mode')
+    select('Normal Mode', from: 'Vim Mode')
     fill_in 'Command', with: ':w'
     fill_in 'Description', with: 'Save file'
 
@@ -34,7 +31,7 @@ feature 'As a user I want to' do
     scenario 'I can not create a duplicated command' do
       command1 = create(:command, :visual_mode)
 
-      select 'Visual Mode', from: 'Mode'
+      select 'Visual Mode', from: 'Vim Mode'
       fill_in 'Command', with: command1.command
       fill_in 'Description', with: command1.description
       click_on 'Create Command'

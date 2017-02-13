@@ -1,6 +1,7 @@
 <tr>
   <td><%= command.command %></td>
   <td><%= command.description %></td>
+  <td><%= command.vim_mode_humanize %></td>
   <td> <%= link_to 'Edit', edit_command_path(command), id: dom_id(command, :edit), class: "btn btn-xs btn-primary" %>
   </td>
 </tr>

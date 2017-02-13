@@ -1,4 +1,10 @@
 class CommandsController < ApplicationController
+  before_action :load_vim_modes
+
+  def index
+    @commands = Command.filter(params.dig(:search, :filter))
+  end
+
   def new
     @command = Command.new
   end
@@ -27,21 +33,17 @@ class CommandsController < ApplicationController
     end
   end
 
-  def normal_mode
-    @commands = Command.normal_mode
-  end
-
-  def visual_mode
-    @commands = Command.visual_mode
-  end
-
   private
+
+  def load_vim_modes
+    @vim_modes = VimMode.to_a
+  end
 
   def command
     @command ||= Command.find params[:id]
   end
 
   def command_params
-    params.require(:command).permit(:mode_id, :command, :description)
+    params.require(:command).permit(:command, :description, :vim_mode)
   end
 end
