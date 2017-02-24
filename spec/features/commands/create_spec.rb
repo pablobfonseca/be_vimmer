@@ -2,12 +2,8 @@ require 'rails_helper'
 
 feature 'As a user I want to' do
   before do
-    visit root_path
-
-    within '.navbar' do
-      click_on 'Commands'
-      click_on 'New'
-    end
+    page_object = PageObjects::Commands.new
+    page_object.click_new
   end
 
   scenario 'create a new command' do

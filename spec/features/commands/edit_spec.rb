@@ -1,17 +1,11 @@
 require 'rails_helper'
 
 feature 'As a user I want to' do
+  let(:page_object) { PageObjects::Commands.new }
+
   before do
     command = create(:command, :normal_mode)
-
-    visit root_path
-
-    within '.nav' do
-      click_on 'Commands'
-      click_on 'All'
-    end
-
-    click_on "edit_command_#{command.id}"
+    page_object.index.click_edit(command)
   end
 
   scenario 'edit command' do
