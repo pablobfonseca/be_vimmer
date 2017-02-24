@@ -12,6 +12,7 @@ Get vim tips
 - [x] View commands by its mode
 - [ ] Save favorite commands
 - [ ] Export commands to PDF
+- [ ] Add optional GIF
 
 ## TODOs
 - [ ] Remove view duplications
