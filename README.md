@@ -10,6 +10,7 @@ Get vim tips
 - [x] Create new vim commands
 - [x] Edit vim commands
 - [x] View commands by its mode
+- [x] Command of the day
 - [ ] Save favorite commands
 - [ ] Export commands to PDF
 - [ ] Add optional GIF
