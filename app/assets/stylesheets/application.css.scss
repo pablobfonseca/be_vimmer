@@ -14,3 +14,32 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+  text-align: center;
+
+  .welcome-title {
+    &:before {
+      content: "{ ";
+    }
+
+    &:before, &:after {
+      font-weight: bold;
+      color: purple;
+      font-size: 50px;
+    }
+
+    &:after {
+      content: " }"
+    }
+  }
+
+  .command {
+    position: relative;
+    top: 30px;
+  }
+}

@@ -11,4 +11,8 @@ class Command < ApplicationRecord
       all
     end
   end
+
+  def self.randomize
+    order('RANDOM()').limit(1)
+  end
 end
